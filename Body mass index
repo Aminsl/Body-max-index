@@ -1,0 +1,29 @@
+#include "stdafx.h"
+#include<iostream>
+#include<iomanip>
+#include<string>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+	float weight, height;
+	double BMI;              //the body mass index
+
+	cout << "in this program,we want to calculate your body mass index.\n";
+	cin.get();
+	cout << "please insert your weight and height\n";
+	cin >> weight;
+	cin >> height;
+	BMI = (weight * 703) / (pow(height, 2));
+	if (BMI >= 18.5&&BMI <= 25)
+		cout << "you are in optimal weight\n";
+	else if (BMI > 25)
+		cout << "you are in overweight\n";
+	else if (BMI < 18.5)
+		cout << "you are in underweight\n";
+	else
+		cout << "\a the entered information is wrong.\n";
+	
+    return 0;
+}
